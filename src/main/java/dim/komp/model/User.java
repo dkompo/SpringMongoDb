@@ -1,5 +1,6 @@
 package dim.komp.model;
 
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
@@ -24,6 +25,8 @@ public class User extends AbstractModel<String> {
 	private String dateOfBirth;
 	private String nickname;
 
+	@DBRef
+	private Address address;
 //	public String getUserId() {
 //		return userId;
 //	}
@@ -64,11 +67,21 @@ public class User extends AbstractModel<String> {
 		this.nickname = nickname;
 	}
 
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(final Address address) {
+		this.address = address;
+	}
+
 	@Override public String toString() {
 		return "User{" +
-				", name='" + name + '\'' +
+				"name='" + name + '\'' +
 				", contact='" + contact + '\'' +
 				", dateOfBirth='" + dateOfBirth + '\'' +
+				", nickname='" + nickname + '\'' +
+				", address=" + address +
 				'}';
 	}
 }

@@ -8,4 +8,5 @@
 	<context:component-scan base-package="dim.komp.*" />
 
 	<bean id="userService" class="dim.komp.service.UserServiceImpl" />
+	<bean id="adressService" class="dim.komp.service.AddressServiceImpl" />
 </beans>
