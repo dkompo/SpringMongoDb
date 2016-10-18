@@ -9,5 +9,4 @@ public interface UserDao {
 
 	void saveUser(User user);
 
-	public void saveOrUpdate(User user);
 }

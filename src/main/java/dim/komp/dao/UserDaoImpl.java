@@ -22,9 +22,6 @@ public class UserDaoImpl /*extends AbstractRepositoryImpl<User>*/ implements Use
 	@Autowired
 	private MongoOperations mongoOps;
 
-	public void saveOrUpdate(User user) {
-		mongoTemplate.insert(user);
-	}
 
 	public void saveUser(User user) {
 		mongoTemplate.save(user, "users");
